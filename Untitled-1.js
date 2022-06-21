@@ -1,0 +1,1 @@
+for (i = 0; i < nums.length; i++) {   if(i % 2 === 0) {     evensArr.push(nums[i])   }  }   console.log(evensArr)
