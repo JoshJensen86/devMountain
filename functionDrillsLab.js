@@ -9,7 +9,10 @@
 /*
   Create a function called helloWorld which simply console logs 'Hello, World!'
   Call the function.
-*/
+*/function helloWorld(){
+  console.log ('Hello, World!')
+}
+
 
 //CODE HERE
 
@@ -19,6 +22,7 @@
 /*
     Write an arrow function called 'jsNinja' that returns the string: 'I am a JavaScript ninja!'
 */
+const jsNinja = () => 'I am a Javascript ninja!'
 
 //CODE HERE
 
@@ -29,7 +33,10 @@
   Ex. If 'Cameron' were passed in as the argument, Cameron would be console logged.
   Call the function, passing in an argument.
 */
-
+function printName (name){
+  console.log (name)
+}
+printName ('Josh')
 //CODE HERE
 
 
@@ -42,6 +49,11 @@
   Ex. If Jake were passed in as the argument, the function would log 'Hello, Jake'
   Make sure to call your function and pass in an argument.
 */
+function greeting (name){
+  name = String (name)
+  console.log ('Hello, ${name}')
+}
+greeting ('Josh')
 
 //CODE HERE
 
@@ -56,8 +68,14 @@
 
     Brownie points if you use a ternary statement (only spend significant time on this if you have wiggle room)
 */
+const compareNums = (num1, num2) => {
+  if (num1 > num2){
+    return num1
+  }else {
+    return num2
+  }
+}
 
-//CODE HERE
 
 
 ////////////////// PROBLEM 6 ////////////////////
@@ -67,7 +85,12 @@
   The add function should RETURN the two parameters added together.
   Create a variable outside the function called 'sum' and set it equal to add invoked (called), passing in 2 arguments.
 */
-
+function add (num, num2) {
+ num = +num
+  num2 = +num2
+  return (num + num2)
+}
+let sum = add(12, 24)
 //CODE HERE
 
 
@@ -83,8 +106,8 @@ const exclaim = function(str) {
 }
 
 // console.log('arrow')
-// console.log('declaration')
-// console.log('expression')
+ //console.log('declaration')
+ console.log('expression')
 
 
 
@@ -99,7 +122,7 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-// console.log('arrow')
+ console.log('arrow')
 // console.log('declaration')
 // console.log('expression')
 
@@ -109,7 +132,7 @@ const exclaimTwo = str => {
 
   Brownie points if you use a template string
 */
-
+const exclaimThree = str = '${str.toUpperCase()}!!!'
 
 
 ////////////////// PROBLEM 9 ////////////////////
@@ -124,7 +147,7 @@ function exclaimFour(str) {
 }
 
 // console.log('arrow')
-// console.log('declaration')
+ console.log('declaration')
 // console.log('expression')
 
 
@@ -136,7 +159,16 @@ function exclaimFour(str) {
   If the name parameter is anything else, return 'Cool name, NAMEPARAM' (with NAMEPARAM being the value of the name parameter being passed in).
   Create a variable called 'nameGreeting' and set it equal to your function invoked (called) passing in an argument.
 */
-
+function nameCheck(name) {
+  if (name === "Steven") {
+    return "What is up Steven?"
+    }else if (name === "Bryan") {
+      return "What is up Bryan?!"
+    } else {
+      return 'Cool name, ${name}'
+    }
+}
+let nameGreeting = nameCheck('Steven')
 //CODE HERE
 
 
@@ -151,8 +183,20 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
+function faveColorFinder (color) {
+  if (color === 'red') {
+    return 'red is a great color'
+  } else if (color === 'green') {
+    return 'green is a solid favorite color'
+  } else if (color === 'black'){
+    return 'so trendy!'
+  }else {
+    return 'you need to reevaluate your favorite color choice!!'
+  }
+}
+let color = faveColorFinder('green')
 
-
+console.log (color)
 ////////////////// PROBLEM 12 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 /*
@@ -160,6 +204,14 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
   Using a for loop, iterate over that array and console log each name.
   Call the function, passing in the `namesArr` array (above).
 */
+function printAllNames (names) {
+  for (let x = 0; x < names.length; x++) {
+    console.log(names[x])
+    
+  }
+  
+}
+printAllNames(namesArr)
 
 //CODE HERE
 
@@ -171,7 +223,14 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
   Otherwise, return 'That is odd indeed!'
   Outside the function, create a variable called `oddChecker` and set it equal to your function invoked, making sure to pass in an argument.
 */
-
+function thatsOdd(num) {
+  if (num % 2) {
+  return "That's not odd!"  
+  } else {
+  return "that is odd indeed!"
+}
+}
+let oddChecker = thatsOdd(7)
 //CODE HERE
 
 
@@ -184,8 +243,15 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
     For example, if we passed in 'Sharknado', 
     we would expect the function to return 'Sharknado is the best movie ever!'
 */
-
 //CODE HERE
+
+function bestMovie (title) => {
+  return ((title) + 'is the best movie ever!!)}
+
+
+const bestMovie = title => '${title} is the best movie ever!'
+
+
 
 
 ////////////////// PROBLEM 15 ////////////////////
